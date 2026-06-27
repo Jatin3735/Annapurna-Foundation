@@ -19,7 +19,7 @@ const Verify = () => {
   useEffect(() => {
     const fetchVolunteer = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/api/volunteers/verify/${encodeURIComponent(decodedRegNumber)}`);
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/volunteers/verify/${encodeURIComponent(decodedRegNumber)}`);
         if (response.ok) {
           const data = await response.json();
           setVolunteer(data);

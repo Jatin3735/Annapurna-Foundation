@@ -9,6 +9,7 @@ const AdminDashboard = () => {
   const navigate = useNavigate();
 
   const userInfo = JSON.parse(localStorage.getItem('userInfo'));
+  
 
   useEffect(() => {
     if (!userInfo) {
@@ -21,10 +22,10 @@ const AdminDashboard = () => {
   const fetchData = async () => {
     setLoading(true);
     try {
-      const volRes = await fetch('http://localhost:5000/api/volunteers', {
+      const volRes = await fetch(`${import.meta.env.VITE_API_URL}/volunteers`, {
         headers: { Authorization: `Bearer ${userInfo.token}` }
       });
-      const authRes = await fetch('http://localhost:5000/api/authorities', {
+      const authRes = await fetch(`${import.meta.env.VITE_API_URL}/authorities`, {
         headers: { Authorization: `Bearer ${userInfo.token}` }
       });
       
@@ -43,7 +44,7 @@ const AdminDashboard = () => {
 
   const handleApprove = async (id) => {
     try {
-      const res = await fetch(`http://localhost:5000/api/volunteers/${id}/approve`, {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/volunteers/${id}/approve`, {
         method: 'PATCH',
         headers: { Authorization: `Bearer ${userInfo.token}` }
       });
@@ -55,7 +56,7 @@ const AdminDashboard = () => {
 
   const handleReject = async (id) => {
     try {
-      const res = await fetch(`http://localhost:5000/api/volunteers/${id}/reject`, {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/volunteers/${id}/reject`, {
         method: 'PATCH',
         headers: { Authorization: `Bearer ${userInfo.token}` }
       });
@@ -68,7 +69,7 @@ const AdminDashboard = () => {
   const handleDeleteVol = async (id) => {
     if (!window.confirm('Are you sure you want to delete this volunteer?')) return;
     try {
-      const res = await fetch(`http://localhost:5000/api/volunteers/${id}`, {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/volunteers/${id}`, {
         method: 'DELETE',
         headers: { Authorization: `Bearer ${userInfo.token}` }
       });

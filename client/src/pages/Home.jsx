@@ -11,7 +11,7 @@ const Home = () => {
     // Fetch authorities
     const fetchAuthorities = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/authorities');
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/authorities`);
         if (response.ok) {
           const data = await response.json();
           // Fallback if no authorities in DB yet
