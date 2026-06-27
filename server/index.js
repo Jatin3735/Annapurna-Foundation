@@ -16,6 +16,11 @@ app.use(cors({
   credentials: true
 }));
 app.use(express.json());
+// Health Route
+app.get('/', (req, res) => {
+  res.send('Annapurna Foundation Backend is Running 🚀');
+});
+
 
 // Routes
 app.use('/api', apiRoutes);
