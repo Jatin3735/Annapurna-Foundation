@@ -12,7 +12,7 @@ const Certificate = forwardRef(({ volunteer }, ref) => {
     year: "numeric",
   });
 
-  const verifyUrl = `${window.location.origin}/verify%2F${encodeURIComponent(volunteer.registrationNumber || "AF/2026/1468")}`;
+  const verifyUrl = `${window.location.origin}/verify/${encodeURIComponent(volunteer.registrationNumber || "AF/2026/1468")}`;
 
   return (
     <>
