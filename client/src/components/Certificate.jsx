@@ -82,7 +82,7 @@ const Certificate = forwardRef(({ volunteer }, ref) => {
           </svg>
         </div>
 
-        <div style={{ position: "absolute", bottom: "30px", left: "50%", transform: "translateX(-50%)", width: "180px", height: "12px", color: "#D4AF37", opacity: 0.85 }}>
+        <div style={{ position: "absolute", bottom: "30px", left: "50%", transform: "translateX(-50%)", width: "109px", height: "12px", color: "#D4AF37", opacity: 0.85 }}>
           <svg viewBox="0 0 100 10 fill" fill="currentColor">
             <path d="M0,5 Q25,0 50,5 Q75,0 100,5 Q75,10 50,5 Q25,10 0,5 Z" />
             <circle cx="50" cy="5" r="3" fill="#051D40" />
@@ -133,17 +133,17 @@ const Certificate = forwardRef(({ volunteer }, ref) => {
           </div>
 
           {/* REMAINS NORMAL: Clean sans-serif line for presentation text */}
-          <p className="cert-sans" style={{ fontSize: "13.5px", fontWeight: "600", color: "#4A5568", margin: "0 auto 4px", letterSpacing: "0.5px" }}>
+          <p className="cert-sans" style={{ fontSize: "13.5px", fontWeight: "600", color: "#4A5568", margin: "0 auto 28px", letterSpacing: "0.5px" }}>
             This Certificate is Proudly Presented To
           </p>
 
           {/* Dynamic Premium Script Recipient Name */}
-          <h3 className="cert-name" style={{ fontSize: "85px", margin: "-16px auto 0", color: "#051D40", fontWeight: "normal", lineHeight: "1", minHeight: "85px" }}>
+          <h3 className="cert-name" style={{ fontSize: "85px", margin: "16px auto 28px", color: "#051D40", fontWeight: "normal", lineHeight: "1", minHeight: "85px" }}>
             {volunteer.fullName || "Jatin Kumar"}
           </h3>
 
           {/* Elegant Fine Accent Under Name */}
-          <div style={{ display: "flex", alignItems: "center", justifyContent: "center", margin: "-6px auto 14px" }}>
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "center", margin: "6px auto 14px" }}>
             <div style={{ width: "350px", height: "1px", background: "linear-gradient(to right, transparent, #C5A059, transparent)" }} />
             <div style={{ position: "absolute", width: "16px", height: "6px", color: "#C5A059" }}>
               <svg viewBox="0 0 20 10" fill="currentColor"><path d="M0,5 Q10,0 20,5 Q10,10 0,5 Z"/></svg>
@@ -156,7 +156,7 @@ const Certificate = forwardRef(({ volunteer }, ref) => {
             the Annapurna Foundation's mission of providing nutritious meals
             to underprivileged children.
           </p>
-          <p className="cert-sans" style={{ maxWidth: "760px", margin: "8px auto 0", fontSize: "13px", color: "#051D40", fontWeight: "700", fontStyle: "italic" }}>
+          <p className="cert-sans" style={{ maxWidth: "760px", margin: "20px auto 0", fontSize: "13px", color: "#051D40", fontWeight: "700", fontStyle: "italic" }}>
             Your contribution has created a meaningful impact in the community and is sincerely appreciated.
           </p>
         </div>
