@@ -301,31 +301,36 @@ const Verify = () => {
           </div>
 
           {/* Certificate Preview */}
-          {/* Certificate Preview - Optimized */}
-          <div className="border border-gray-200 rounded-xl bg-gray-50 p-2 sm:p-3 md:p-4 shadow-inner overflow-auto max-h-[280px] xs:max-h-[320px] sm:max-h-[380px] md:max-h-[420px] lg:max-h-[480px] xl:max-h-[520px]">
-            <p className="text-[10px] sm:text-xs md:text-sm text-gray-500 mb-1.5 sm:mb-2 md:mb-3 font-semibold uppercase text-center">
-              📄 Live Preview
-            </p>
-            <div className="flex justify-center items-start min-h-[120px] xs:min-h-[150px] sm:min-h-[180px] md:min-h-[220px] lg:min-h-[260px]">
-              <div
-                className="transform origin-top transition-all duration-300 w-full max-w-[800px]"
-                style={{
-                  transform: `scale(${window.innerWidth < 480 ? 0.2 :
-                      window.innerWidth < 640 ? 0.28 :
-                        window.innerWidth < 768 ? 0.4 :
-                          window.innerWidth < 1024 ? 0.55 :
-                            window.innerWidth < 1280 ? 0.7 : 0.85
-                    })`,
-                  transformOrigin: 'top center'
-                }}
-              >
-                <Certificate ref={certificateRef} volunteer={volunteer} />
-              </div>
-            </div>
-            <p className="text-[8px] text-gray-400 mt-1.5 text-center hidden sm:block">
-              🔍 Certificate preview • Scroll to see more
-            </p>
-          </div>
+          {/* Certificate Preview */}
+<div className="border border-gray-200 rounded-xl bg-gray-50 p-3 sm:p-4 shadow-inner">
+  <h3 className="text-xs sm:text-sm font-semibold text-gray-500 uppercase text-center mb-3">
+    📄 Live Preview
+  </h3>
+
+  <div className="flex justify-center overflow-hidden rounded-lg bg-white">
+    <div
+      className="
+        origin-top
+        scale-[0.18]
+        xs:scale-[0.22]
+        sm:scale-[0.30]
+        md:scale-[0.42]
+        lg:scale-[0.55]
+        xl:scale-[0.70]
+        2xl:scale-[0.85]
+      "
+    >
+      <Certificate
+        ref={certificateRef}
+        volunteer={volunteer}
+      />
+    </div>
+  </div>
+
+  <p className="hidden sm:block text-center text-xs text-gray-400 mt-3">
+    🔍 Live preview updates automatically
+  </p>
+</div>
         </motion.div>
 
         {/* Print-specific styles */}
