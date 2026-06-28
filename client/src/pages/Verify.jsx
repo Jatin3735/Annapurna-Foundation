@@ -301,21 +301,30 @@ const Verify = () => {
           </div>
 
           {/* Certificate Preview */}
-          <div className="border border-gray-200 rounded-xl bg-gray-50 p-2 sm:p-3 md:p-4 shadow-inner overflow-auto max-h-[400px] sm:max-h-[500px] md:max-h-[600px]">
-            <p className="text-[10px] sm:text-xs md:text-sm text-gray-500 mb-2 sm:mb-3 md:mb-4 font-semibold uppercase text-center">
+          {/* Certificate Preview - Optimized */}
+          <div className="border border-gray-200 rounded-xl bg-gray-50 p-2 sm:p-3 md:p-4 shadow-inner overflow-auto max-h-[280px] xs:max-h-[320px] sm:max-h-[380px] md:max-h-[420px] lg:max-h-[480px] xl:max-h-[520px]">
+            <p className="text-[10px] sm:text-xs md:text-sm text-gray-500 mb-1.5 sm:mb-2 md:mb-3 font-semibold uppercase text-center">
               📄 Live Preview
             </p>
-            <div className="flex justify-center items-start">
+            <div className="flex justify-center items-start min-h-[120px] xs:min-h-[150px] sm:min-h-[180px] md:min-h-[220px] lg:min-h-[260px]">
               <div
-                className="transform origin-top transition-all duration-300 w-full"
+                className="transform origin-top transition-all duration-300 w-full max-w-[800px]"
                 style={{
-                  transform: `scale(${window.innerWidth < 640 ? 0.35 : window.innerWidth < 768 ? 0.55 : window.innerWidth < 1024 ? 0.75 : 0.95})`,
+                  transform: `scale(${window.innerWidth < 480 ? 0.2 :
+                      window.innerWidth < 640 ? 0.28 :
+                        window.innerWidth < 768 ? 0.4 :
+                          window.innerWidth < 1024 ? 0.55 :
+                            window.innerWidth < 1280 ? 0.7 : 0.85
+                    })`,
                   transformOrigin: 'top center'
                 }}
               >
                 <Certificate ref={certificateRef} volunteer={volunteer} />
               </div>
             </div>
+            <p className="text-[8px] text-gray-400 mt-1.5 text-center hidden sm:block">
+              🔍 Certificate preview • Scroll to see more
+            </p>
           </div>
         </motion.div>
 
