@@ -96,14 +96,14 @@ const Verify = () => {
   const handleShare = (platform) => {
     const text = `I'm a verified volunteer at Annapurna Foundation! Registration: ${volunteer.registrationNumber}`;
     const url = window.location.href;
-    
+
     const shareUrls = {
       linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`,
       twitter: `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`,
       facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`,
       whatsapp: `https://api.whatsapp.com/send?text=${encodeURIComponent(text + ' ' + url)}`
     };
-    
+
     window.open(shareUrls[platform], '_blank', 'width=600,height=400');
     setShowShareMenu(false);
   };
@@ -191,13 +191,20 @@ const Verify = () => {
                       </p>
                       <button
                         onClick={handleCopyRegNumber}
-                        className="text-gray-400 hover:text-primary transition p-1"
-                        aria-label="Copy registration number"
+                        className="text-gray-400 hover:text-primary hover:bg-gray-100 p-1.5 rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary/50"
+                        aria-label="Copy registration number to clipboard"
+                        title="Copy to clipboard"
                       >
-                        <Copy size={16} />
+                        {copied ? (
+                          <CheckCircle size={16} className="text-green-500" />
+                        ) : (
+                          <Copy size={16} />
+                        )}
                       </button>
                       {copied && (
-                        <span className="text-xs text-green-600 font-medium">Copied!</span>
+                        <span className="text-xs text-green-600 font-medium animate-pulse">
+                          Copied!
+                        </span>
                       )}
                     </div>
                   </div>
@@ -317,7 +324,7 @@ const Verify = () => {
               📄 Live Preview
             </p>
             <div className="flex justify-center">
-              <div 
+              <div
                 className="transform scale-50 sm:scale-75 md:scale-90 lg:scale-100 origin-top transition-all duration-300"
                 style={{ transformOrigin: 'top center' }}
               >
