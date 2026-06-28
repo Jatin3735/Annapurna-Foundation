@@ -185,28 +185,10 @@ const Verify = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-gray-100">
                   <div>
                     <p className="text-xs sm:text-sm text-gray-500 mb-1">Registration Number</p>
-                    <div className="flex items-center gap-2 flex-wrap">
+                    
                       <p className="font-mono font-bold text-primary text-sm sm:text-base break-all">
                         {volunteer.registrationNumber}
                       </p>
-                      <button
-                        onClick={handleCopyRegNumber}
-                        className="text-gray-400 hover:text-primary hover:bg-gray-100 p-1.5 rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary/50"
-                        aria-label="Copy registration number to clipboard"
-                        title="Copy to clipboard"
-                      >
-                        {copied ? (
-                          <CheckCircle size={16} className="text-green-500" />
-                        ) : (
-                          <Copy size={16} />
-                        )}
-                      </button>
-                      {copied && (
-                        <span className="text-xs text-green-600 font-medium animate-pulse">
-                          Copied!
-                        </span>
-                      )}
-                    </div>
                   </div>
                   <div>
                     <p className="text-xs sm:text-sm text-gray-500 mb-1">Certificate Number</p>
