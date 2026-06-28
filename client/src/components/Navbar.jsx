@@ -40,6 +40,13 @@ const Navbar = () => {
             </Link>
 
             <Link
+              to="/about"
+              className="text-gray-700 hover:text-accent font-medium transition"
+            >
+              About
+            </Link>
+
+            <Link
               to="/gallery"
               className="font-medium text-gray-700 hover:text-accent transition duration-200"
             >
@@ -81,6 +88,14 @@ const Navbar = () => {
                 className="block rounded-md px-3 py-2 text-gray-700 font-medium hover:bg-gray-50 hover:text-accent transition"
               >
                 Home
+              </Link>
+
+              <Link
+                to="/about"
+                onClick={toggleMenu}
+                className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-accent hover:bg-gray-50"
+              >
+                About
               </Link>
 
               <Link

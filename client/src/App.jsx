@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
+import About from './pages/About';
 import Gallery from './pages/Gallery';
 import Register from './pages/Register';
 import AdminLogin from './pages/AdminLogin';
@@ -18,6 +19,7 @@ function App() {
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/register" element={<Register />} />
             <Route path="/verify/:registrationNumber" element={<Verify />} />

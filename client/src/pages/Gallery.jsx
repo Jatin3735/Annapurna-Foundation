@@ -9,9 +9,16 @@ const Gallery = () => {
 
   const images = [
     { id: 1, src: '/images/gallery1.png', category: 'Food Distribution', title: 'Weekend Food Drive', location: 'City Slums', date: 'Oct 15, 2025' },
-    { id: 2, src: '/images/hero.png', category: 'Volunteer Activities', title: 'Team Building', location: 'Central Park', date: 'Nov 02, 2025' },
-    { id: 3, src: '/images/gallery1.png', category: 'Awareness Programs', title: 'Nutrition Workshop', location: 'Local School', date: 'Dec 10, 2025' },
+    { id: 2, src: '/images/gallery3.webp', category: 'Volunteer Activities', title: 'Team Building', location: 'Central Area', date: 'Nov 02, 2025' },
     { id: 3, src: '/images/gallery2.jpg', category: 'Awareness Programs', title: 'Nutrition Workshop', location: 'Local School', date: 'Dec 10, 2025' },
+    {
+    id: 4, src: '/images/gallery4.webp', category: 'Community Service', title: 'Birthday Celebration with    Underprivileged Children', location: 'Delhi', date: 'Dec 10, 2025'},
+    { id: 5, src: '/images/gallery5.jpg', category: 'Child Nutrition', title: 'Providing Healthy Meals to Children', location: 'Saharanpur, UP', date: 'Dec 15, 2025' },
+    {
+    id: 6, src: '/images/gallery6.jpg', category: 'Volunteer Activities', title: 'Volunteer Connecting with Children', location: 'Narwana', date: 'Dec 20, 2025' },
+    {
+    id: 7, src: '/images/gallery7.jpg', category: 'Community Outreach', title: 'Volunteer Serving Children with Care',  location: 'Noida, Uttar Pradesh', date: 'Aug 14, 2021' },
+    {id: 8, src: '/images/gallery8.jpeg', category: 'Food Distribution', title: 'Healthy Meals for School Children',   location: 'Government School, Kaithal', date: 'Jan 05, 2026' },
   ];
 
   const filteredImages = filter === 'All' ? images : images.filter(img => img.category === filter);
