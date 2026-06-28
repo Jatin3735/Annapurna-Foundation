@@ -9,8 +9,50 @@ const Home = () => {
   const navigate = useNavigate();
 
   const fallbackAuthorities = [
-    { _id: '1', name: 'John Doe', designation: 'President', description: 'Leading the foundation with a vision for a hunger-free world.', photoUrl: '/images/authority1.png' },
-    { _id: '2', name: 'Jane Smith', designation: 'Secretary', description: 'Managing daily operations and volunteer coordination.', photoUrl: '/images/authority1.png' },
+    { _id: '1', name: 'Sourav Kumar', designation: 'President', description: 'Leading the foundation with a vision for a hunger-free world.', photoUrl: '/images/authority1.png' },
+    { _id: '2', name: ' Sajan Chauhan', designation: 'Secretary', description: 'Managing daily operations and volunteer coordination.', photoUrl: '/images/authority2.png' },
+    {
+    _id: '3',
+    name: 'Rahul Verma',
+    designation: 'Vice President',
+    description: 'Supporting organizational growth by overseeing outreach programs, partnerships, and community engagement activities.',
+    photoUrl: '/images/authority3.png'
+  },
+  {
+    _id: '4',
+    name: 'Anjali Gupta',
+    designation: 'Secretary',
+    description: 'Managing administrative responsibilities, maintaining records, and ensuring smooth communication across all foundation activities.',
+    photoUrl: '/images/authority4.png'
+  },
+  {
+    _id: '5',
+    name: 'Vikas Kumar',
+    designation: 'Treasurer',
+    description: 'Responsible for financial planning, budgeting, donation management, and maintaining transparency in all financial operations.',
+    photoUrl: '/images/authority5.png'
+  },
+  {
+    _id: '6',
+    name: 'Neha Singh',
+    designation: 'Volunteer Coordinator',
+    description: 'Organizing volunteer registrations, training sessions, and ensuring active participation in food distribution and awareness programs.',
+    photoUrl: '/images/authority6.png'
+  },
+  {
+    _id: '7',
+    name: 'Amit Yadav',
+    designation: 'Program Manager',
+    description: 'Planning and supervising nutrition drives, educational support programs, and community welfare initiatives.',
+    photoUrl: '/images/authority7.png'
+  },
+  {
+    _id: '8',
+    name: 'Kavita Mehta',
+    designation: 'Public Relations Officer',
+    description: 'Building relationships with donors, partners, and the community while promoting the foundation’s mission and social impact.',
+    photoUrl: '/images/authority8.png'
+  }
   ];
 
   useEffect(() => {

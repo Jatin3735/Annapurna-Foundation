@@ -35,7 +35,7 @@ const Footer = () => {
             </p>
 
             <p className="text-sm sm:text-base text-gray-300 mb-2">
-              Phone: +91 7419921792
+              Phone: +91 9034488909
             </p>
 
             <p className="text-sm sm:text-base text-gray-300 break-all">
