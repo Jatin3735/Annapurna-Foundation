@@ -185,10 +185,10 @@ const Verify = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-gray-100">
                   <div>
                     <p className="text-xs sm:text-sm text-gray-500 mb-1">Registration Number</p>
-                    
-                      <p className="font-mono font-bold text-primary text-sm sm:text-base break-all">
-                        {volunteer.registrationNumber}
-                      </p>
+
+                    <p className="font-mono font-bold text-primary text-sm sm:text-base break-all">
+                      {volunteer.registrationNumber}
+                    </p>
                   </div>
                   <div>
                     <p className="text-xs sm:text-sm text-gray-500 mb-1">Certificate Number</p>
@@ -301,14 +301,17 @@ const Verify = () => {
           </div>
 
           {/* Certificate Preview */}
-          <div className="border border-gray-200 rounded-xl bg-gray-50 p-3 sm:p-4 shadow-inner overflow-auto max-h-[500px] sm:max-h-[600px]">
-            <p className="text-xs sm:text-sm text-gray-500 mb-3 sm:mb-4 font-semibold uppercase text-center">
+          <div className="border border-gray-200 rounded-xl bg-gray-50 p-2 sm:p-3 md:p-4 shadow-inner overflow-auto max-h-[400px] sm:max-h-[500px] md:max-h-[600px]">
+            <p className="text-[10px] sm:text-xs md:text-sm text-gray-500 mb-2 sm:mb-3 md:mb-4 font-semibold uppercase text-center">
               📄 Live Preview
             </p>
-            <div className="flex justify-center">
+            <div className="flex justify-center items-start">
               <div
-                className="transform scale-50 sm:scale-75 md:scale-90 lg:scale-100 origin-top transition-all duration-300"
-                style={{ transformOrigin: 'top center' }}
+                className="transform origin-top transition-all duration-300 w-full"
+                style={{
+                  transform: `scale(${window.innerWidth < 640 ? 0.35 : window.innerWidth < 768 ? 0.55 : window.innerWidth < 1024 ? 0.75 : 0.95})`,
+                  transformOrigin: 'top center'
+                }}
               >
                 <Certificate ref={certificateRef} volunteer={volunteer} />
               </div>
