@@ -12,47 +12,47 @@ const Home = () => {
     { _id: '1', name: 'Sourav Kumar', designation: 'President', description: 'Leading the foundation with a vision for a hunger-free world.', photoUrl: '/images/authority1.png' },
     { _id: '2', name: ' Sajan Chauhan', designation: 'Secretary', description: 'Managing daily operations and volunteer coordination.', photoUrl: '/images/authority2.png' },
     {
-    _id: '3',
-    name: 'Rahul Verma',
-    designation: 'Vice President',
-    description: 'Supporting organizational growth by overseeing outreach programs, partnerships, and community engagement activities.',
-    photoUrl: '/images/authority3.png'
-  },
-  {
-    _id: '4',
-    name: 'Anjali Gupta',
-    designation: 'Secretary',
-    description: 'Managing administrative responsibilities, maintaining records, and ensuring smooth communication across all foundation activities.',
-    photoUrl: '/images/authority4.png'
-  },
-  {
-    _id: '5',
-    name: 'Vikas Kumar',
-    designation: 'Treasurer',
-    description: 'Responsible for financial planning, budgeting, donation management, and maintaining transparency in all financial operations.',
-    photoUrl: '/images/authority5.png'
-  },
-  {
-    _id: '6',
-    name: 'Neha Singh',
-    designation: 'Volunteer Coordinator',
-    description: 'Organizing volunteer registrations, training sessions, and ensuring active participation in food distribution and awareness programs.',
-    photoUrl: '/images/authority6.png'
-  },
-  {
-    _id: '7',
-    name: 'Amit Yadav',
-    designation: 'Program Manager',
-    description: 'Planning and supervising nutrition drives, educational support programs, and community welfare initiatives.',
-    photoUrl: '/images/authority7.png'
-  },
-  {
-    _id: '8',
-    name: 'Kavita Mehta',
-    designation: 'Public Relations Officer',
-    description: 'Building relationships with donors, partners, and the community while promoting the foundation’s mission and social impact.',
-    photoUrl: '/images/authority8.png'
-  }
+      _id: '3',
+      name: 'Rahul Verma',
+      designation: 'Vice President',
+      description: 'Supporting organizational growth by overseeing outreach programs, partnerships, and community engagement activities.',
+      photoUrl: '/images/authority3.png'
+    },
+    {
+      _id: '4',
+      name: 'Anjali Gupta',
+      designation: 'Secretary',
+      description: 'Managing administrative responsibilities, maintaining records, and ensuring smooth communication across all foundation activities.',
+      photoUrl: '/images/authority4.png'
+    },
+    {
+      _id: '5',
+      name: 'Vikas Kumar',
+      designation: 'Treasurer',
+      description: 'Responsible for financial planning, budgeting, donation management, and maintaining transparency in all financial operations.',
+      photoUrl: '/images/authority5.png'
+    },
+    {
+      _id: '6',
+      name: 'Neha Singh',
+      designation: 'Volunteer Coordinator',
+      description: 'Organizing volunteer registrations, training sessions, and ensuring active participation in food distribution and awareness programs.',
+      photoUrl: '/images/authority6.png'
+    },
+    {
+      _id: '7',
+      name: 'Amit Yadav',
+      designation: 'Program Manager',
+      description: 'Planning and supervising nutrition drives, educational support programs, and community welfare initiatives.',
+      photoUrl: '/images/authority7.png'
+    },
+    {
+      _id: '8',
+      name: 'Kavita Mehta',
+      designation: 'Public Relations Officer',
+      description: 'Building relationships with donors, partners, and the community while promoting the foundation’s mission and social impact.',
+      photoUrl: '/images/authority8.png'
+    }
   ];
 
   useEffect(() => {
@@ -96,7 +96,8 @@ const Home = () => {
             alt="Food Distribution" 
             className="w-full h-full object-cover"
             onError={(e) => {
-              e.target.src = 'https://via.placeholder.com/1920x1080/4CAF50/ffffff?text=Annapurna+Foundation';
+              e.target.onerror = null; // Prevents infinite loops if offline
+              e.target.src = 'https://placehold.co/1920x1080/4CAF50/ffffff?text=Annapurna+Foundation';
             }}
           />
           <div className="absolute inset-0 bg-primary/70"></div>
@@ -152,7 +153,8 @@ const Home = () => {
                 alt="About Us" 
                 className="rounded-2xl shadow-2xl w-full h-auto"
                 onError={(e) => {
-                  e.target.src = 'https://via.placeholder.com/600x400/4CAF50/ffffff?text=About+Us';
+                  e.target.onerror = null;
+                  e.target.src = 'https://placehold.co/600x400/4CAF50/ffffff?text=About+Us';
                 }}
               />
             </motion.div>
@@ -203,7 +205,8 @@ const Home = () => {
                     alt={auth.name} 
                     className="w-24 h-24 sm:w-32 sm:h-32 rounded-full mx-auto mb-4 object-cover border-4 border-gray-100"
                     onError={(e) => {
-                      e.target.src = 'https://via.placeholder.com/128x128/4CAF50/ffffff?text=Avatar';
+                      e.target.onerror = null;
+                      e.target.src = 'https://placehold.co/128x128/4CAF50/ffffff?text=Avatar';
                     }}
                   />
                   <h3 className="text-lg sm:text-xl font-bold text-primary mb-1">{auth.name}</h3>
@@ -245,7 +248,8 @@ const Home = () => {
                     alt={`Event ${item}`} 
                     className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
                     onError={(e) => {
-                      e.target.src = 'https://via.placeholder.com/600x400/4CAF50/ffffff?text=Event+Image';
+                      e.target.onerror = null;
+                      e.target.src = 'https://placehold.co/600x400/4CAF50/ffffff?text=Event+Image';
                     }}
                   />
                 </div>

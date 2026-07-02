@@ -10,11 +10,26 @@ dotenv.config();
 
 const app = express();
 
-// Middleware
-app.use(cors({
-  origin: process.env.CLIENT_URL,
-  credentials: true
-}));
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://annapurna-foundation.vercel.app",
+];
+
+app.use(
+  cors({
+    origin: function (origin, callback) {
+      // Allow requests with no origin (Postman, mobile apps)
+      if (!origin) return callback(null, true);
+
+      if (allowedOrigins.includes(origin)) {
+        return callback(null, true);
+      }
+
+      return callback(new Error("Not allowed by CORS"));
+    },
+    credentials: true,
+  })
+);
 app.use(express.json());
 // Health Route
 app.get('/', (req, res) => {
