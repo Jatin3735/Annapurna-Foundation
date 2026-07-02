@@ -254,10 +254,7 @@ const Home = () => {
                   />
                 </div>
                 <div className="p-4 sm:p-6">
-                  <div className="flex flex-wrap justify-between text-xs sm:text-sm text-gray-500 mb-2">
-                    <span>📍 {item === 1 ? 'City Slums' : 'Rural Village'}</span>
-                    <span>📅 {item === 1 ? 'Oct 15, 2025' : 'Nov 20, 2025'}</span>
-                  </div>
+                  <br />
                   <h3 className="text-lg sm:text-xl font-bold text-primary mb-2">
                     {item === 1 ? 'Weekend Food Drive' : 'Community Kitchen Program'}
                   </h3>

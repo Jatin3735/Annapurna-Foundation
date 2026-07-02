@@ -10,7 +10,7 @@ const Gallery = () => {
   const images = [
     { id: 1, src: '/images/gallery1.png', category: 'Food Distribution', title: 'Weekend Food Drive', location: 'City Slums', date: 'Oct 15, 2025' },
     { id: 2, src: '/images/gallery3.webp', category: 'Volunteer Activities', title: 'Team Building', location: 'Central Area', date: 'Nov 02, 2025' },
-    { id: 3, src: '/images/gallery2.jpg', category: 'Awareness Programs', title: 'Nutrition Workshop', location: 'Local School', date: 'Dec 10, 2025' },
+    { id: 3, src: '/images/gallery9.jpg', category: 'Awareness Programs', title: 'Nutrition Workshop', location: 'Local School', date: 'Dec 10, 2025' },
     {
     id: 4, src: '/images/gallery4.webp', category: 'Community Service', title: 'Birthday Celebration with    Underprivileged Children', location: 'Delhi', date: 'Dec 10, 2025'},
     { id: 5, src: '/images/gallery5.jpg', category: 'Child Nutrition', title: 'Providing Healthy Meals to Children', location: 'Saharanpur, UP', date: 'Dec 15, 2025' },
